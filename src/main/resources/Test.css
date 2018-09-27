@@ -1,0 +1,35 @@
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 0, 0, 0, 1);
+}
+
+.root{
+    -fx-background-color: #D3D3D3;
+    /*-fx-background-image: url("background.jpg");
+    //-fx-background-repeat: no-repeat;
+    //-fx-background-size: cover, auto;*/
+
+}
+
+
+
+.button{
+    -fx-effect: dropshadow(two-pass-box , darkgray, 10, 0.0 , 4, 5);
+    -fx-background-color: Gray;
+    -fx-background-radius: 5 5 5 5;
+    -fx-background-insets: 2 2 2 2 ;
+}
+
+.button:pressed{
+    -fx-background-color: rgba(180,180,180,0.7);
+}
+
+.button:hover{
+    -fx-background-color: rgba(235,235,235,0.7);
+}
+
+.button:focused{
+    -fx-background-color: rgba(205,205,205,0.7)
+}

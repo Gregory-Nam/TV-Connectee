@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fr.univ_amu.iut.MenuController?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane fx:id="borderRoot" stylesheets="Test.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.univ_amu.iut.televisionController">
+
+   <top><MenuController fx:id="menu">
+
+    </MenuController>
+   </top>
+    <bottom>
+        <GridPane fx:id="gridPaneCenter" BorderPane.alignment="CENTER" style="-fx-background-color: #777777;">
+
+            <children>
+                <ImageView fx:id="imageBot1" preserveRatio="true" />
+                <Label fx:id="messageImportant" alignment="CENTER" prefHeight="110.0" prefWidth="175.0" text="Label" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Dubai Regular" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor></Label>
+                <ImageView fx:id="imageBot2" preserveRatio="true" GridPane.columnIndex="2" />
+                <Label fx:id="heureSystem" alignment="CENTER" prefHeight="110.0" prefWidth="175.0" text="Label" textAlignment="CENTER" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Ebrima" size="20.0" />
+               </font></Label>
+            </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </bottom>
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+
+            <children>
+                <TableView fx:id="listTableView" GridPane.columnIndex="1">
+                    <columns>
+                        <TableColumn fx:id="nameCol" prefWidth="114.0" text="Name" />
+                        <TableColumn fx:id="noteCol" prefWidth="134.0" resizable="false" text="Note" />
+                    </columns>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+                </TableView>
+                <WebView fx:id="webViewCalendar" GridPane.columnIndex="0">
+
+                </WebView>
+            </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </center>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</BorderPane>
